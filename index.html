@@ -5,8 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Bytebeat player with a collection of many formulas from around the internet; Chasyxx fork">
-	<title id="TAB-NAME">LP1218's Bytebeat Player</title>
-	<link rel="canonical" href="https://gfljs2101.github.io/LevelPack1218s-Bytebeat-Player"/>
+	<title id="TAB-NAME">RS0319's Bytebeat Player</title>
+	<link rel="canonical" href="https://romansaorodov0319-a11y.github.io/RS0319s-Bytebeat-Player"/>
 	<link rel="shortcut icon" href="./favicon.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="modulepreload" href="./build/audio-processor.mjs">
@@ -49,6 +49,7 @@
 					<option value="Waveform">Waveform</option>
 					<option value="Diagram">Diagram</option>
 					<option value="Combined">Combined</option>
+					<option value="FFT">FFT</option>
 				</select>
 				<select id="control-mode" class="control-select controls-grow" title="Sound mode">
 					<option value="Bytebeat" title="Traditional wrapping 0 to 255 bytebeat." selected>Bytebeat</option>
@@ -62,13 +63,18 @@
 				<div class="controls-group controls-grow">
 					<input type="text" id="control-samplerate" class="control-text" title="Set sample rate (in Hz) then press Enter">
 					<select id="control-samplerate-select" class="control-select" title="Sample rate">
-						<option value="8000">8000Hz</option>
+						<option value="4000">4kHz</option>
+						<option value="5512.5">5512.5Hz</option>
+						<option value="6000">6kHz</option>
+						<option value="8000">8kHz</option>
 						<option value="11025">11025Hz</option>
-						<option value="16000">16000Hz</option>
-						<option value="22050">22050Hz</option>
-						<option value="32000">32000Hz</option>
-						<option value="44100">44100Hz</option>
-						<option value="48000">48000Hz</option>
+						<option value="12000">12kHz</option>
+						<option value="16000">16kHz</option>
+						<option value="22050">22.05kHz</option>
+						<option value="32000">32kHz</option>
+						<option value="44100">44.1kHz</option>
+						<option value="48000">48kHz</option>
+						<option value="64000">64kHz</option>
 					</select>
 				</div>
 				<div class="controls-group controls-grow" width="128">
@@ -181,6 +187,9 @@
 					<br /><br />
 					This website is a fork of <a href="https://editech-mw.github.io/bytebeat/" target="_blank">EdiTech Bytebeats</a> by <a href="https://github.com/editech-mw" target="_blank">EdiTech</a>.<br />
 					Forked by LevelPack1218 aka GFLJS2100.
+					<br /><br />
+					This website is a fork of <a href="https://gfljs2101.github.io/LevelPack1218s-Bytebeat-Player/" target="_blank">Level Pack 1218 BTB</a> by <a href="https://github.com/editech-mw" target="_blank">EdiTech</a>.<br />
+					Forked by RS0319 aka Romansaorodov0319.
 					<br/><br />
 					Custom functions include: <ul>
 						<li>bitC: <b>(X,Y,Z)</b> => <i>X</i>&amp;<i>Y</i>?<i>Z</i>:0</li>
@@ -278,7 +287,8 @@
 				<article id="settings" class="library-container entry loaded">
 					<label class="settings-block">
 						<select id="control-theme-style" class="control-select" title="Player theme style">
-							<option value="Default" selected>Default</option>
+							<option value="Default">selected>Default</option>
+							<option value="LevelPack1218">selected>LevelPack1218</option>
 							<option value="Chasyxx">Chasyxx</option>
 							<option value="Chasyxx Classic">Chasyxx Classic</option>
 							<option value="Dollchan">Dollchan</option>
@@ -366,7 +376,7 @@
 			</details>
 			<footer>
 				<a class="link" href="https://dollchan.net/btb/" title="Dollchan bytebeat discussion threads" target="_blank">Discussion board</a><br>
-				<a class="link" href="https://github.com/GFLJS2101/LevelPack1218s-Bytebeat-Player" title="This site's Github repo" target="_blank">This site's source code</a><br>
+				<a class="link" href="https://github.com/GFLJS2101/LevelPack1218s-Bytebeat-Player" title="LP1218's Github repo" target="_blank">LP1218's source code</a><br>
 				<a class="link" href="https://github.com/Chasyxx/EnBeat_NEW" title="Chasyxx's Github repo" target="_blank">Chasyxx's source code</a><br>
 				<a class="link" href="https://github.com/SthephanShinkufag/bytebeat-composer" title="Dollchan's Github repo" target="_blank">Dollchan's source code</a>
 			</footer>
@@ -407,14 +417,14 @@
 				<path d="M10.5 7.5H13c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5h-2.5V13c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5v-2.5c0-1.7 1.3-3 3-3zm11 17H19c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h2.5V19c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v2.5c0 1.7-1.3 3-3 3zm3-14V13c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5v-2.5H19c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h2.5c1.7 0 3 1.3 3 3zm-17 11V19c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v2.5H13c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5h-2.5c-1.7 0-3-1.3-3-3z" />
 			</symbol>
 			<symbol viewBox="0 0 16 16" id="symbol-wait">
-				<circle fill="#929087" cx="8" cy="2" r="2" />
-				<circle fill="#C5C2BA" cx="8" cy="14" r="2" />
-				<circle fill="#ACAAA0" cx="2" cy="8" r="2" />
-				<circle fill="#79766C" cx="14" cy="8" r="2" />
-				<circle fill="#D2CFC6" cx="12.25" cy="12.25" r="2" />
-				<circle fill="#9F9C93" cx="3.75" cy="3.75" r="2" />
-				<circle fill="#B9B6AE" cx="3.75" cy="12.25" r="2" />
-				<circle fill="#868379" cx="12.25" cy="3.75" r="2" />
+				<circle fill="#0000FF" cx="8" cy="2" r="2" />
+				<circle fill="#0000EE" cx="8" cy="14" r="2" />
+				<circle fill="#0000DD" cx="2" cy="8" r="2" />
+				<circle fill="#0000AA" cx="14" cy="8" r="2" />
+				<circle fill="#000088" cx="12.25" cy="12.25" r="2" />
+				<circle fill="#000055" cx="3.75" cy="3.75" r="2" />
+				<circle fill="#00002F" cx="3.75" cy="12.25" r="2" />
+				<circle fill="#000000" cx="12.25" cy="3.75" r="2" />
 			</symbol>
 		</svg>
 	</div>
